@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rockit_app/screens/home/widgets/home-card.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -41,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Recently Learning',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
-              // _renderLearning()
+              _renderLearning()
+              
             ],
           ),
         ),
@@ -49,7 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  _renderLearning() {
-    
+  Column _renderLearning() {
+    List<Widget> cards = List<Widget>();
+
+    for (var i = 0; i < 2; i++) {
+      cards.add(HomeCard());
+    }
+
+    return Column(children: cards);
   }
 }
