@@ -59,7 +59,7 @@ flutter:
   fonts:
     - family: Lobster
       fonts:
-        - asset: lib/assets/fonts/Lobster-Regular.ttf
+        - asset: assets/fonts/Lobster-Regular.ttf
     
   #
   # For details regarding fonts from package dependencies,
