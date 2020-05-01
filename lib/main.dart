@@ -8,7 +8,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.red, fontFamily: 'Lobster'),
+      theme: ThemeData(
+          primarySwatch: Colors.red,
+          fontFamily: 'Barlow',
+          brightness: Brightness.dark),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -44,13 +47,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 begin: Alignment.bottomLeft,
                 colors: [Colors.red, Colors.redAccent])),
         child: SafeArea(
-          child: Column(
+          child: ListView(
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
             children: <Widget>[
-              Padding(padding: EdgeInsets.only(top: 20)),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                  child: Text(
+                    'Welcome!',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontFamily: 'Lobster'),
+                  ),
+                ),
+              ),
               Text(
-                'Welcome Bitch!',
-                style: TextStyle(
-                    color: Colors.white, fontSize: 40, fontFamily: 'Lobster'),
+                'Recently Learning',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               )
             ],
           ),
